@@ -14,7 +14,7 @@ face_recognize_punchcard_lib.py和face_recognize_punchcard.py本质上差不多�
 
 ##运行效果   
 1.主界面
-![](https://i.imgur.com/fNw0Mgj.png)![](https://i.imgur.com/Gg3hmBs.png)![](https://i.imgur.com/ymz7nYV.png)
+![](https://i.imgur.com/fNw0Mgj.png)
 
    
 
