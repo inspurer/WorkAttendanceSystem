@@ -9,7 +9,13 @@ mainui.py是主界面，调用face_img_register.py和face_recognize_punchcard.py
 其中face_img_register.py是录入人脸信息，face_recognize_punchcard.py是刷脸考勤
 face_feature_storage.py属于鸡肋文件，没什么用，舍不得删，毕竟有点参考价值。   
 face_recognize_punchcard_lib.py和face_recognize_punchcard.py本质上差不多，
-但是前者是给face_img_register.py专有的依赖。防止录入两个同样的人脸建不同数据库的风险。
+但是前者是给face_img_register.py专有的依赖。防止录入两个同样的人脸建不同数据库的风险。   
+
+更新
+mainui.py-->myapp.py   
+face_recognize_punchcard.py等鸡肋文件放到useless里    
+运行效率显著提高   
+2018/9/23记
 
 
 ##运行效果   
