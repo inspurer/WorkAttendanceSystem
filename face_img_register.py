@@ -7,7 +7,7 @@ import wx
 import csv
 from skimage import io as iio
 from face_recognize_punchcard import return_euclidean_distance,features_known_arr,facerec,detector,predictor
-
+import sys
 # 创建 cv2 摄像头对象
 #    C++: VideoCapture::VideoCapture(int device);
 
@@ -77,7 +77,7 @@ class   RegisterUi(wx.Frame):
             height = self.rects[0].bottom() - self.rects[0].top()
             width = self.rects[0].right() - self.rects[0].left()
             self.sc_number += 1
-            im_blank = np.zeros((height*2, width*2, 3), np.uint8)
+            im_blank = np.zeros((height, width, 3), np.uint8)
             for ii in range(height):
                 for jj in range(width):
                     im_blank[ii][jj] = self.im_rd[self.rects[0].top() + ii][self.rects[0].left() + jj]
@@ -113,7 +113,7 @@ class   RegisterUi(wx.Frame):
                 shutil.rmtree(path_make_dir+self.name)
                 print("重复录入，已删除姓名文件夹", path_make_dir+self.name)
 
-        if self.sc_number == 0:
+        if self.sc_number == 0 and len(self.name)>0:
             if os.path.exists(path_make_dir+self.name):
                 shutil.rmtree(path_make_dir+self.name)
                 print("您未保存截图，已删除姓名文件夹", path_make_dir+self.name)
@@ -149,12 +149,16 @@ class   RegisterUi(wx.Frame):
 
         self.name = ""
         self.register_flag = 0
+        self.sc_number = 0;
 
 
 
 
     def _open_cap(self,event):
         self.cap = cv2.VideoCapture(0)
+
+        del sys.modules['face_recognize_punchcard']
+        from face_recognize_punchcard import return_euclidean_distance, features_known_arr, facerec, detector, predictor
 
         # cap.set(propId, value)
         # 设置视频参数，propId 设置的视频参数，value 设置的参数值

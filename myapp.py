@@ -3,6 +3,7 @@ import os
 import webbrowser
 import face_img_register
 import face_recognize_punchcard
+import sys
 main ="icon/main.png"
 file_path = os.getcwd()+r'\data\logcat.csv'
 class   Mainui(wx.Frame):
@@ -37,6 +38,8 @@ class   Mainui(wx.Frame):
         self.bmp = wx.StaticBitmap(parent=self, pos=(180,80), bitmap=wx.Bitmap(self.image_cover))
 
     def OnRegisterButtonClicked(self,event):
+        del sys.modules['face_img_register']
+        import  face_img_register
         #import face_img_register
         #runpy.run_path("face_img_register.py")
         #frame = face_img_register.RegisterUi(None)
@@ -44,6 +47,8 @@ class   Mainui(wx.Frame):
         app.frame.Show()
 
     def OnPunchCardButtonClicked(self,event):
+        del sys.modules['face_recognize_punchcard']
+        import face_recognize_punchcard
         #import face_recognize_punchcard
         app.frame = face_recognize_punchcard.PunchcardUi(None)
         app.frame.Show()
@@ -60,7 +65,6 @@ class   Mainui(wx.Frame):
 
     def OnInstructButtonClicked(self,event):
         wx.MessageBox(message="先占个位",caption="操作说明")
-
         pass
 
     def OnAboutButtonClicked(self,event):
