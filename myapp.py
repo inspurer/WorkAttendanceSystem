@@ -1,7 +1,8 @@
 import wx
-import runpy
 import os
 import webbrowser
+import face_img_register
+import face_recognize_punchcard
 main ="icon/main.png"
 file_path = os.getcwd()+r'\data\logcat.csv'
 class   Mainui(wx.Frame):
@@ -10,6 +11,7 @@ class   Mainui(wx.Frame):
         self.SetBackgroundColour('white')
         self.Center()
 
+        self.frame = ''
         self.RegisterButton = wx.Button(parent=self, pos=(50, 120), size=(80, 50), label='人脸录入')
 
         self.PunchcardButton = wx.Button(parent=self, pos=(50, 220), size=(80, 50), label='刷脸签到')
@@ -35,10 +37,16 @@ class   Mainui(wx.Frame):
         self.bmp = wx.StaticBitmap(parent=self, pos=(180,80), bitmap=wx.Bitmap(self.image_cover))
 
     def OnRegisterButtonClicked(self,event):
-        runpy.run_path("face_img_register.py")
+        #import face_img_register
+        #runpy.run_path("face_img_register.py")
+        #frame = face_img_register.RegisterUi(None)
+        app.frame = face_img_register.RegisterUi(None)
+        app.frame.Show()
 
     def OnPunchCardButtonClicked(self,event):
-        runpy.run_path("face_recognize_punchcard.py")
+        #import face_recognize_punchcard
+        app.frame = face_recognize_punchcard.PunchcardUi(None)
+        app.frame.Show()
 
     def OnLogcatButtonClicked(self,event):
         if os.path.exists(file_path):
@@ -58,9 +66,12 @@ class   Mainui(wx.Frame):
     def OnAboutButtonClicked(self,event):
         wx.MessageBox(message="技术支持:肖涛,刘佳璇      专业班级:通信1602班"+
                               "\n联系电话:110101101       所在单位:中南大学", caption="关于我们")
-        pass
 
-app = wx.App()
-frame = Mainui(None)
-frame.Show()
+class MainApp(wx.App):
+    def OnInit(self):
+        self.frame = Mainui(None)
+        self.frame.Show()
+        return True
+
+app = MainApp()
 app.MainLoop()

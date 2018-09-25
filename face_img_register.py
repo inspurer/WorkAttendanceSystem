@@ -1,14 +1,12 @@
-import dlib         # 人脸识别的库 Dlib
 import numpy as np  # 数据处理的库 Numpy
 import cv2          # 图像处理的库 OpenCv
 import os
 import shutil
-import io
 import _thread
 import wx
 import csv
 from skimage import io as iio
-from face_recognize_punchcard_lib import return_euclidean_distance,features_known_arr,facerec,detector,predictor
+from face_recognize_punchcard import return_euclidean_distance,features_known_arr,facerec,detector,predictor
 
 # 创建 cv2 摄像头对象
 #    C++: VideoCapture::VideoCapture(int device);
@@ -79,11 +77,18 @@ class   RegisterUi(wx.Frame):
             height = self.rects[0].bottom() - self.rects[0].top()
             width = self.rects[0].right() - self.rects[0].left()
             self.sc_number += 1
-            im_blank = np.zeros((height, width, 3), np.uint8)
+            im_blank = np.zeros((height*2, width*2, 3), np.uint8)
             for ii in range(height):
                 for jj in range(width):
                     im_blank[ii][jj] = self.im_rd[self.rects[0].top() + ii][self.rects[0].left() + jj]
-            cv2.imwrite(path_make_dir+self.name + "/img_face_" + str(self.sc_number) + ".jpg", im_blank)
+            # cv2.imwrite(path_make_dir+self.name + "/img_face_" + str(self.sc_number) + ".jpg", im_blank)
+            # cap = cv2.VideoCapture("***.mp4")
+            # cap.set(cv2.CAP_PROP_POS_FRAMES, 2)
+            # ret, frame = cap.read()
+            # cv2.imwrite("我//h.jpg", frame)  # 该方法不成功
+
+            #解决python3下使用cv2.imwrite存储带有中文路径图片
+            cv2.imencode('.jpg', im_blank)[1].tofile(path_make_dir+self.name + "/img_face_" + str(self.sc_number) + ".jpg") #正确方法
             print("写入本地：", str(path_make_dir+self.name) + "/img_face_" + str(self.sc_number) + ".jpg")
 
         else:
@@ -128,10 +133,8 @@ class   RegisterUi(wx.Frame):
                     feature_list.append(face_descriptor)
                 else:
                     face_descriptor = 0
-                    print("no face")
-
-
-            if len(feature_list) > 0:
+                    print("未在照片中识别到人脸")
+            if len(feature_list)>0:
                 for j in range(128):
                     feature_average.append(0)
                     for i in range(len(feature_list)):
@@ -139,12 +142,15 @@ class   RegisterUi(wx.Frame):
                     feature_average[j] = (feature_average[j])/len(feature_list)
                 feature_average.append(self.name)
 
-            with open(path_feature_all, "a+", newline="") as csvfile:
-                writer = csv.writer(csvfile)
-                writer.writerow(feature_average)
+                with open(path_feature_all, "a+", newline="") as csvfile:
+                    writer = csv.writer(csvfile)
+                    print('写入一条特征人脸入库',feature_average)
+                    writer.writerow(feature_average)
 
         self.name = ""
         self.register_flag = 0
+
+
 
 
     def _open_cap(self,event):
@@ -153,6 +159,7 @@ class   RegisterUi(wx.Frame):
         # cap.set(propId, value)
         # 设置视频参数，propId 设置的视频参数，value 设置的参数值
         self.cap.set(3, 480)
+        #self.cap.set(cv2.CAP_PROP_FPS,5)
         while self.cap.isOpened():
             # cap.read()
             # 返回两个值：
@@ -179,10 +186,10 @@ class   RegisterUi(wx.Frame):
                         face_name = features_known_arr[i][-1]
                         print(face_name)
                         wx.MessageBox(message=face_name + "，您已录过人脸，请检查是否签过到", caption="警告")
-                        frame.NewButton.Enable(False)
-                        frame.ShortCutButton.Enable(False)
-                        frame.SaveButton.Enable(True)
-                        self.register_flag = 1;
+                        self.NewButton.Enable(False)
+                        self.ShortCutButton.Enable(False)
+                        self.SaveButton.Enable(True)
+                        self.register_flag = 1
 
                 for k, d in enumerate(self.rects):
                     # 根据人脸大小生成空的图像
@@ -207,10 +214,11 @@ class   RegisterUi(wx.Frame):
                 _thread.exit()
 
 
-app = wx.App()
 
-frame = RegisterUi(None)
-frame.Show()
-app.MainLoop()
+# app = wx.App()
+#
+# frame = RegisterUi(None)
+# frame.Show()
+# app.MainLoop()
 
 #cap.isOpened（） 返回 true/false 检查初始化是否成功
