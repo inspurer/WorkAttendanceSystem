@@ -1,5 +1,6 @@
 import wx
 import os
+from importlib import reload
 import webbrowser
 import face_img_register
 import face_recognize_punchcard
@@ -38,8 +39,8 @@ class   Mainui(wx.Frame):
         self.bmp = wx.StaticBitmap(parent=self, pos=(180,80), bitmap=wx.Bitmap(self.image_cover))
 
     def OnRegisterButtonClicked(self,event):
-        del sys.modules['face_img_register']
-        import  face_img_register
+        reload(face_img_register)
+        #del sys.modules['face_img_register']
         #import face_img_register
         #runpy.run_path("face_img_register.py")
         #frame = face_img_register.RegisterUi(None)
@@ -47,8 +48,8 @@ class   Mainui(wx.Frame):
         app.frame.Show()
 
     def OnPunchCardButtonClicked(self,event):
-        del sys.modules['face_recognize_punchcard']
-        import face_recognize_punchcard
+        #del sys.modules['face_recognize_punchcard']
+        reload(face_recognize_punchcard)
         #import face_recognize_punchcard
         app.frame = face_recognize_punchcard.PunchcardUi(None)
         app.frame.Show()

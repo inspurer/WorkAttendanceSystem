@@ -5,8 +5,9 @@ import shutil
 import _thread
 import wx
 import csv
+from importlib import reload
 from skimage import io as iio
-from face_recognize_punchcard import return_euclidean_distance,features_known_arr,facerec,detector,predictor
+import face_recognize_punchcard
 import sys
 # 创建 cv2 摄像头对象
 #    C++: VideoCapture::VideoCapture(int device);
@@ -126,10 +127,10 @@ class   RegisterUi(wx.Frame):
                 print("正在读的人脸图像：", pic_path)
                 img = iio.imread(pic_path)
                 img_gray = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
-                dets = detector(img_gray, 1)
+                dets = face_recognize_punchcard.detector(img_gray, 1)
                 if len(dets) != 0:
-                    shape = predictor(img_gray, dets[0])
-                    face_descriptor = facerec.compute_face_descriptor(img_gray, shape)
+                    shape = face_recognize_punchcard.predictor(img_gray, dets[0])
+                    face_descriptor = face_recognize_punchcard.facerec.compute_face_descriptor(img_gray, shape)
                     feature_list.append(face_descriptor)
                 else:
                     face_descriptor = 0
@@ -155,10 +156,15 @@ class   RegisterUi(wx.Frame):
 
 
     def _open_cap(self,event):
+        # reload(facerec)
+        reload(face_recognize_punchcard)
+        # reload(predictor)
+        # reload(detector)
+        # reload(return_euclidean_distance())
+
         self.cap = cv2.VideoCapture(0)
 
-        del sys.modules['face_recognize_punchcard']
-        from face_recognize_punchcard import return_euclidean_distance, features_known_arr, facerec, detector, predictor
+
 
         # cap.set(propId, value)
         # 设置视频参数，propId 设置的视频参数，value 设置的参数值
@@ -171,7 +177,7 @@ class   RegisterUi(wx.Frame):
             #    图像对象，图像的三维矩阵q
             flag, self.im_rd = self.cap.read()
             # 人脸数 rects
-            self.rects = detector(self.im_rd, 1)
+            self.rects = face_recognize_punchcard.detector(self.im_rd, 1)
 
             cv2.waitKey(1)  # 必不可少
             # 待会要写的字体
@@ -182,12 +188,12 @@ class   RegisterUi(wx.Frame):
                 # 矩形框#d是人脸
 
                 # 查重
-                features_cap = facerec.compute_face_descriptor(self.im_rd, predictor(self.im_rd, self.rects[0]))
-                for i in range(len(features_known_arr)):
+                features_cap = face_recognize_punchcard.facerec.compute_face_descriptor(self.im_rd, face_recognize_punchcard.predictor(self.im_rd, self.rects[0]))
+                for i in range(len(face_recognize_punchcard.features_known_arr)):
                     # 将某张人脸与存储的所有人脸数据进行比对
-                    compare = return_euclidean_distance(features_cap, features_known_arr[i][0:-1])
+                    compare = face_recognize_punchcard.return_euclidean_distance(features_cap, face_recognize_punchcard.features_known_arr[i][0:-1])
                     if compare == "same":  # 找到了相似脸
-                        face_name = features_known_arr[i][-1]
+                        face_name = face_recognize_punchcard.features_known_arr[i][-1]
                         print(face_name)
                         wx.MessageBox(message=face_name + "，您已录过人脸，请检查是否签过到", caption="警告")
                         self.NewButton.Enable(False)
