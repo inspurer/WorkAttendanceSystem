@@ -4,7 +4,7 @@
 -----------------------------------------------------------------------------------    
 
 # 工程简介    
-# **项目结构是V1.0版本的，V2.0的介绍请看文末更新板块**
+# **项目结构是V1.0版本的，V2.0的介绍请看文末更新版块**
 ## 项目结构    
 mainui.py是主界面，调用face_img_register.py和face_recognize_punchcard.py   
 其中face_img_register.py是录入人脸信息，face_recognize_punchcard.py是刷脸考勤
@@ -46,12 +46,12 @@ face_recognize_punchcard_lib.py等鸡肋文件放到useless文件夹里
 左边的信息栏会有相应的信息打印。   
 4. `开始签到`后，如不点击`结束签到`,就会一直对屏幕前的人脸进行签到，签到状态分三种,未识别的人脸，签到成功，   
 签到成功但是迟到了(9.00后签到),重复签到(此时签到日志不会写入到数据库。         
-5. 为确保程序稳定性，每一个菜单里的按钮尽量成对操作。     
+5. 为确保程序稳定性，每一个菜单里的按钮尽量成对操作。    
 
 -----------------------------------------------------------------------------------
-******Thanks for your attention;can you fork it if helping you? Thanks again*******    
+******Thanks for your attention;can you fork it if helping you? Thanks again******    
 ****CopyRight 2391527690@qq.com;send me for allowance if you want to transmit it****    
 
 
-
+# [源代码地址](https://github.com/inspurer/WorkAttendanceSystem)   
 
