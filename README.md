@@ -19,11 +19,12 @@ face_recognize_punchcard_lib.py和face_recognize_punchcard.py本质上差不多�
 
 ## 运行效果   
 ### 1. 主界面   
-![](https://i.imgur.com/fNw0Mgj.png)   
+![](pictures/1.png)   
 ### 2. 人脸录入   
-![](https://i.imgur.com/Gg3hmBs.png)    
-### 3. 刷脸考勤  
-![](https://i.imgur.com/ymz7nYV.png)
+![](pictures/2.png)    
+### 3. 刷脸考勤    
+这是通宵后的我
+![](pictures/3.png)
 
 其余的就不多做展示了，有什么问题欢迎2391527690@qq.com联系      
 
@@ -40,7 +41,8 @@ face_recognize_punchcard_lib.py等鸡肋文件放到useless文件夹里
 
 # :dolphin:V2.0   
 ## 1. 全新设计的UI,更人性化的操作    
-![](https://i.imgur.com/2dDK3Yo.png)![](https://i.imgur.com/UgpBEwb.png)![](https://i.imgur.com/ABcKPML.png)     
+![](pictures/4.png)![](pictures/5.png)
+这也是通宵后的我![](pictures/6.png)     
 ## 2. 数据更加安全，用户不可见
 人脸数据和签到日志全部保存在inspurer.db数据库文件里，更加安全；而且对人脸数据进行了压缩，更加小巧。   
 ## 3. 注意事项       
@@ -53,9 +55,10 @@ face_recognize_punchcard_lib.py等鸡肋文件放到useless文件夹里
 5. 为确保程序稳定性，每一个菜单里的按钮尽量成对操作。    
 
 -----------------------------------------------------------------------------------
-******Thanks for your attention;can you fork it if helping you? Thanks again******    
-****CopyRight 2391527690@qq.com;send me for allowance if you want to transmit it****    
+****Thanks for your attention;can you fork it if helping you?   
+CopyRight 2391527690@qq.com;send me for more****
 
+# git clone下载仓库速度过慢的问题请参考:[CSDN博客](https://blog.csdn.net/ygdxt/article/details/82825013)
 
 # [源代码地址](https://github.com/inspurer/WorkAttendanceSystem)   
 
