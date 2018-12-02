@@ -9,7 +9,7 @@
 |个人博客|[https://inspurer.github.io/](https://inspurer.github.io/)|
 -----------------------------------------------------------------------------------  
 
-# :dolphin:打包后的exe，可直接下载运行,因项目过大，只好上传到百度云：[链接：https://pan.baidu.com/s/1aIA6AhTB8LVESSAN5jgDjQ 提取码：l7or](https://pan.baidu.com/s/1aIA6AhTB8LVESSAN5jgDjQ)
+# :dolphin:打包后的exe,可直接下载运行,因项目过大,只上传到百度云：[链接：https://pan.baidu.com/s/1aIA6AhTB8LVESSAN5jgDjQ 提取码：l7or](https://pan.baidu.com/s/1aIA6AhTB8LVESSAN5jgDjQ)
 # :dolphin:V1.0    
 ## 项目结构    
 mainui.py是主界面，调用face_img_register.py和face_recognize_punchcard.py   
