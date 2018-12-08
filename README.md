@@ -33,9 +33,7 @@ face_recognize_punchcard_lib.py和face_recognize_punchcard.py本质上差不多�
 ![](pictures/2.png)    
 ### 3. 刷脸考勤   
 
-这是通宵后的我
-
-![](pictures/3.png)
+图片设计个人隐私，已被我删除。
 
 ## 更新     
 ### 2018/9/23更新
@@ -57,7 +55,7 @@ face_recognize_punchcard_lib.py等鸡肋文件放到useless文件夹里
 ## 1. 全新设计的UI,更人性化的操作    
 ![](pictures/4.png)![](pictures/5.png)
 
-这也是通宵后的我
+这是通宵后的我
 
 ![](pictures/6.png)     
 ## 2. 数据更加安全，用户不可见
