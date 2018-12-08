@@ -13,7 +13,7 @@
 
 -----------------------------------------------------------------------------------  
 
-# :dolphin:2.0版本已打包成exe,可直接下载运行,因文件过大,只上传到百度云：  
+# :dolphin:V2.0版本已打包,可直接下载运行,文件过大，只上传百度云  
 
 [链接：https://pan.baidu.com/s/1aIA6AhTB8LVESSAN5jgDjQ 提取码：l7or](https://pan.baidu.com/s/1aIA6AhTB8LVESSAN5jgDjQ) 
 
@@ -22,7 +22,7 @@
 
 # :dolphin:V1.0    
 ## 项目结构    
-mainui.py是主界面，调用face_img_register.py和face_recognize_punchcard.py，其中face_img_register.py主要实现录入人脸信息功能，face_recognize_punchcard.py实现刷脸考勤，face_feature_storage.py是在调试过程中产生的文件，没什么用，但舍不得删，毕竟有点参考价值。   
+mainui.py是主界面，调用face_img_register.py和face_recognize_punchcard.py，其中face_img_register.py主要实现录入人脸信息功能，face_recognize_punchcard.py实现刷脸考勤，face_feature_storage.py是在调试过程中产生的文件，没什么用，可无视。  
 face_recognize_punchcard_lib.py和face_recognize_punchcard.py本质上差不多，但是前者是给face_img_register.py专有的依赖。    
 防止录入两个同样的人脸建不同数据库的风险。   
 
@@ -60,18 +60,18 @@ face_recognize_punchcard_lib.py等鸡肋文件放到useless文件夹里
 ## 3. 注意事项   
 <ol>
 <li>打开摄像头时请左右晃动一下人脸，确保人脸识别开始.</li>
-<li>人脸识别时做了拒绝处理，多张人脸时，只取距离屏幕最近的人脸.<li>
+<li>人脸识别时做了拒绝处理，多张人脸时，只取距离屏幕最近的人脸.</li>
 <li>`新建录入`时会自动录入十张人脸照片，也可手动点击`完成录入`立即完成，之后就会计算人脸数据并存储到数据库中,左边的信息栏会有相应的信息打印.</li?
 <li>`开始签到`后，如不点击`结束签到`,就会一直对屏幕前的人脸进行签到，签到状态分三种,未识别的人脸,签到成功,签到成功但是迟到了(9.00后签到),重复签到(此时签到日志不会写入到数据库.</li>         
 <li>为确保程序稳定性，每一个菜单里的按钮尽量成对操作.</li>  
 </ol>
 -----------------------------------------------------------------------------------
 
+# 后话
+## git clone下载仓库速度过慢的问题请参考:[CSDN博客](https://blog.csdn.net/ygdxt/article/details/82825013)
 
-# git clone下载仓库速度过慢的问题请参考:[CSDN博客](https://blog.csdn.net/ygdxt/article/details/82825013)
+## 有关代码的详细解释和设计实现过程请参考:[微信公众号](https://mp.weixin.qq.com/s?src=11&timestamp=1544280051&ver=1283&signature=WpptKZypviF-i3dIwyhl9MzJeaXDDnmT-uK8R2oo3S-*R0EhjCPa2gKrc*JQYiGwkTh78kWRgwuj-3HLnka6-c07cgdWPVokZZXwnX2pc5nvnsUo9B9Nw7agLQhu-vSB&new=1)  
 
-# 有关代码的详细解释和设计实现过程请参考:[微信公众号](https://mp.weixin.qq.com/s?src=11&timestamp=1544280051&ver=1283&signature=WpptKZypviF-i3dIwyhl9MzJeaXDDnmT-uK8R2oo3S-*R0EhjCPa2gKrc*JQYiGwkTh78kWRgwuj-3HLnka6-c07cgdWPVokZZXwnX2pc5nvnsUo9B9Nw7agLQhu-vSB&new=1)  
-
-# 大佬们给个赞善呗  
+## 赞善  
 ![](https://github.com/inspurer/WorkAttendanceSystem/blob/master/pictures/TIM%E5%9B%BE%E7%89%8720181208222337.png)
 
