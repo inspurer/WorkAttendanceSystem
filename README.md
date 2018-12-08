@@ -31,8 +31,10 @@ face_recognize_punchcard_lib.py和face_recognize_punchcard.py本质上差不多�
 ![](pictures/1.png)   
 ### 2. 人脸录入   
 ![](pictures/2.png)    
-### 3. 刷脸考勤    
+### 3. 刷脸考勤   
+
 这是通宵后的我
+
 ![](pictures/3.png)
 
 ## 更新     
@@ -54,7 +56,10 @@ face_recognize_punchcard_lib.py等鸡肋文件放到useless文件夹里
 
 ## 1. 全新设计的UI,更人性化的操作    
 ![](pictures/4.png)![](pictures/5.png)
-这也是通宵后的我![](pictures/6.png)     
+
+这也是通宵后的我
+
+![](pictures/6.png)     
 ## 2. 数据更加安全，用户不可见
 人脸数据和签到日志全部保存在inspurer.db数据库文件里，更加安全；而且对人脸数据进行了压缩，更加小巧。   
 ## 3. 注意事项   
