@@ -73,8 +73,10 @@ face_recognize_punchcard_lib.py等鸡肋文件放到useless文件夹里
 # 后话
 ## git clone下载仓库速度过慢的问题请参考:[CSDN博客](https://blog.csdn.net/ygdxt/article/details/82825013)
 
-## 有关代码的详细解释和设计实现过程请参考:[微信公众号](https://mp.weixin.qq.com/s?src=11&timestamp=1544280051&ver=1283&signature=WpptKZypviF-i3dIwyhl9MzJeaXDDnmT-uK8R2oo3S-*R0EhjCPa2gKrc*JQYiGwkTh78kWRgwuj-3HLnka6-c07cgdWPVokZZXwnX2pc5nvnsUo9B9Nw7agLQhu-vSB&new=1)  
+## 有关代码的详细解释和设计实现过程请参考:[微信公众号:inspurer](https://mp.weixin.qq.com/s/6BxBQoSwzhI6WooKMuTkNA)  
 
-## 赞善  
-![](https://github.com/inspurer/WorkAttendanceSystem/blob/master/pictures/TIM%E5%9B%BE%E7%89%8720181208222337.png)
+## 赞赏  
+![](https://github.com/inspurer/WorkAttendanceSystem/blob/master/pictures/TIM%E5%9B%BE%E7%89%8720181208222337.png)  
+
+## 欢迎进群讨论交流，群号码: 861016679
 
