@@ -70,7 +70,7 @@ class   Mainui(wx.Frame):
 
     def OnAboutButtonClicked(self,event):
         wx.MessageBox(message="技术支持:肖涛,刘佳璇      专业班级:通信1602班"+
-                              "\n联系电话:110101101       所在单位:中南大学", caption="关于我们")
+                              "\n联系qq:2391527690       所在单位:中南大学", caption="关于我们")
 
 class MainApp(wx.App):
     def OnInit(self):

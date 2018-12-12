@@ -26,7 +26,7 @@ info = 'icon/info.png'
 #register ui
 class   RegisterUi(wx.Frame):
     def __init__(self,superion):
-        wx.Frame.__init__(self,parent=superion,title="人脸录入",size=(800,590))
+        wx.Frame.__init__(self,parent=superion,title="人脸录入",size=(800,590),style=wx.DEFAULT_FRAME_STYLE|wx.STAY_ON_TOP)
         self.SetBackgroundColour('white')
         self.Center()
 

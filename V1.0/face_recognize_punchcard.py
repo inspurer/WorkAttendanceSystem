@@ -87,7 +87,7 @@ def get_128d_features(img_gray):
     # return face_des[0]
 class   PunchcardUi(wx.Frame):
     def __init__(self,superion):
-        wx.Frame.__init__(self,parent=superion,title="刷脸签到",size=(800,590))
+        wx.Frame.__init__(self,parent=superion,title="刷脸签到",size=(800,590),style=wx.DEFAULT_FRAME_STYLE|wx.STAY_ON_TOP)
         self.SetBackgroundColour('white')
         self.Center()
 
