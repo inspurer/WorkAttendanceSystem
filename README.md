@@ -22,10 +22,11 @@
  <li>Pycharm</li>
  <li>Python 3.5+</li>
  <li>pip install -r requirements.txt</li>
- <ol>
+<ol>
   
 # :dolphin:V1.0    
 ## 项目结构    
+
 ~~mainui.py是主界面，调用face_img_register.py和face_recognize_punchcard.py，其中face_img_register.py主要实现录入人脸信息功能，face_recognize_punchcard.py实现刷脸考勤，face_feature_storage.py是在调试过程中产生的文件，可无视 
 face_recognize_punchcard_lib.py和face_recognize_punchcard.py本质上差不多，但是前者是给face_img_register.py库依赖。    
 防止录入两个同样的人脸建不同数据库的风险。  ~~ 
@@ -37,7 +38,7 @@ face_recognize_punchcard_lib.py和face_recognize_punchcard.py本质上差不多�
 ![](pictures/2.png)    
 ### 3. 刷脸考勤   
 
-图片涉及个人隐私，已被我删除。
+>图片涉及个人隐私，已被我删除。
 
 ## 更新     
 ### 2018/9/23更新
@@ -55,16 +56,20 @@ face_recognize_punchcard_lib.py和face_recognize_punchcard.py本质上差不多�
 # :dolphin:V2.0   
 ## 重构代码   
 
-老师看了我的V1.0版本后给的建议，第一，不能有太多弹窗界面，一些操作应该放到工具栏中，而不是弹窗实现；第二，数据保存在csv文件容易被窃读，应该保存到数据库里；第三，显示考勤日志时应该由自己的电子表格实现而不是直接调用excel。基于以上的问题和算法优化的需要，我把代码优化成了V2.0，同时所以的代码合在一个WorkAttwndanceSystem.py文件里，就人脸识别这部分代码而言，提高了代码复用度
+>老师看了我的V1.0版本后给的建议，
+>第一，不能有太多弹窗界面，一些操作应该放到工具栏中，而不是弹窗实现；
+>第二，数据保存在csv文件容易被窃读，应该保存到数据库里；
+>第三，显示考勤日志时应该由自己的电子表格实现而不是直接调用excel。
+>基于以上的问题和算法优化的需要，我把代码优化成了V2.0，同时所以的代码合在一个WorkAttwndanceSystem.py文件里，就人脸识别这部分代码而言，提高了代码复用度
 
 ## 1. 全新设计的UI,更人性化的操作    
 ![](pictures/4.png)![](pictures/5.png)
 
-这是通宵后的我
+>这是通宵后的我
 
 ![](pictures/6.png)     
 ## 2. 数据更加安全，用户不可见
-人脸数据和签到日志全部保存在inspurer.db数据库文件里，更加安全；而且对人脸数据进行了压缩，更加小巧。   
+>人脸数据和签到日志全部保存在inspurer.db数据库文件里，更加安全；而且对人脸数据进行了压缩，更加小巧。   
 ## 3. 注意事项   
 <ol>
 <li>打开摄像头时请左右晃动一下人脸，确保人脸识别开始.</li>
