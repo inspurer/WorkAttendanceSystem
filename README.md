@@ -1,30 +1,34 @@
 # WorkAttendanceSystem    
+ 
 一个基于opencv人脸识别的员工考勤系统，作者某双一流A类大学里的~~一流~~学生，写于2018/09/，python课设期间。  
 
- ![](https://img.shields.io/badge/opencv-cv2-green.svg)
- ![](https://img.shields.io/badge/dlib-19.4.0-red.svg)
+<p align="center">
+  <img src="https://img.shields.io/badge/dlib--green.svg"></a>
+  <img src="https://img.shields.io/badge/opencv--red.svg"></a>
+  <img src="https://img.shields.io/badge/sqlite3--blue.svg"></a>
+  <img src="https://img.shields.io/badge/numpy--yellow.svg"></a>
+ </p>
  
 |作者|[inspurer](https://inspurer.github.io/2018/06/07/%E6%9C%88%E5%B0%8F%E6%B0%B4%E9%95%BF%E7%9A%84%E7%94%B1%E6%9D%A5/#more)|
 |:---:|:---:|
-|QQ|2391527690|
+|QQ交流群|[861016679](https://jq.qq.com/?_wv=1027&k=5Js6sKS)|
 |个人博客|[https://inspurer.github.io/](https://inspurer.github.io/)|
-
-
-
------------------------------------------------------------------------------------  
-
-# :dolphin:V2.0版本已打包,可直接下载运行,文件过大，只上传百度云  
-
-[链接：https://pan.baidu.com/s/1aIA6AhTB8LVESSAN5jgDjQ 提取码：l7or](https://pan.baidu.com/s/1aIA6AhTB8LVESSAN5jgDjQ) 
 
 
 ------------------------------------------------------------------------------------
 
+# QuickStart
+<ol>
+ <li>Pycharm</li>
+ <li>Python 3.5+</li>
+ <li>pip install -r requirements.txt</li>
+ <ol>
+  
 # :dolphin:V1.0    
 ## 项目结构    
-mainui.py是主界面，调用face_img_register.py和face_recognize_punchcard.py，其中face_img_register.py主要实现录入人脸信息功能，face_recognize_punchcard.py实现刷脸考勤，face_feature_storage.py是在调试过程中产生的文件，可无视 
+~~mainui.py是主界面，调用face_img_register.py和face_recognize_punchcard.py，其中face_img_register.py主要实现录入人脸信息功能，face_recognize_punchcard.py实现刷脸考勤，face_feature_storage.py是在调试过程中产生的文件，可无视 
 face_recognize_punchcard_lib.py和face_recognize_punchcard.py本质上差不多，但是前者是给face_img_register.py库依赖。    
-防止录入两个同样的人脸建不同数据库的风险。   
+防止录入两个同样的人脸建不同数据库的风险。  ~~ 
 
 ## 运行效果   
 ### 1. 主界面   
@@ -37,14 +41,15 @@ face_recognize_punchcard_lib.py和face_recognize_punchcard.py本质上差不多�
 
 ## 更新     
 ### 2018/9/23更新
-mainui.py-->myapp.py   
-face_recognize_punchcard_lib.py等鸡肋文件放到useless文件夹里    
-运行效率显著提高   
+
+>mainui.py-->myapp.py   
+>face_recognize_punchcard_lib.py等鸡肋文件放到useless文件夹里    
+>运行效率显著提高   
 
 ### 2018/9/25更新    
-解决同步性问题，新录入的人脸能立即被识别    
-代码的运行速度少许下降    
 
+>解决同步性问题，新录入的人脸能立即被识别    
+>代码的运行速度少许下降    
 ----------------------------------------------------------------------------------------------
 
 # :dolphin:V2.0   
@@ -75,8 +80,11 @@ face_recognize_punchcard_lib.py等鸡肋文件放到useless文件夹里
 
 ## 有关代码的详细解释和设计实现过程请参考:[微信公众号:inspurer](https://mp.weixin.qq.com/s/6BxBQoSwzhI6WooKMuTkNA)  
 
+## :dolphin:V2.0版本已打包,可直接下载运行,文件过大，只上传百度云  
+
+[链接：https://pan.baidu.com/s/1aIA6AhTB8LVESSAN5jgDjQ 提取码：l7or](https://pan.baidu.com/s/1aIA6AhTB8LVESSAN5jgDjQ) 
+
+
 ## 赞赏  
 ![](https://github.com/inspurer/WorkAttendanceSystem/blob/master/pictures/TIM%E5%9B%BE%E7%89%8720181208222337.png)  
-
-## 欢迎进群讨论交流，群号码: 861016679
 
