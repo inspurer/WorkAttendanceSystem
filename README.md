@@ -1,13 +1,13 @@
 # WorkAttendanceSystem    
  
-一个基于opencv人脸识别的员工考勤系统，作者某双一流A类大学里的~~一流~~学生，写于2018/09/，python课设期间。  
-
 <p align="center">
   <img src="https://img.shields.io/badge/dlib--green.svg"></a>
   <img src="https://img.shields.io/badge/opencv--red.svg"></a>
   <img src="https://img.shields.io/badge/sqlite3--blue.svg"></a>
   <img src="https://img.shields.io/badge/numpy--yellow.svg"></a>
  </p>
+ 
+ 一个基于opencv人脸识别的员工考勤系统，作者某双一流A类大学里的~~一流~~学生，写于2018/09/，python课设期间。  
  
 |作者|[inspurer](https://inspurer.github.io/2018/06/07/%E6%9C%88%E5%B0%8F%E6%B0%B4%E9%95%BF%E7%9A%84%E7%94%B1%E6%9D%A5/#more)|
 |:---:|:---:|
@@ -17,7 +17,7 @@
 
 ------------------------------------------------------------------------------------
 
-# QuickStart
+# :dolphin:QuickStart
 <ol>
  <li>Pycharm</li>
  <li>Python 3.5+</li>
@@ -93,7 +93,7 @@ face_recognize_punchcard_lib.py和face_recognize_punchcard.py本质上差不多�
 
 ## 有关代码的详细解释和设计实现过程请参考:[微信公众号:inspurer](https://mp.weixin.qq.com/s/6BxBQoSwzhI6WooKMuTkNA)  
 
-## :dolphin:V2.0版本已打包,可直接下载运行,文件过大，只上传百度云  
+## V2.0版本已打包,可直接下载运行,文件过大，只上传百度云  
 
 [链接：https://pan.baidu.com/s/1aIA6AhTB8LVESSAN5jgDjQ 提取码：l7or](https://pan.baidu.com/s/1aIA6AhTB8LVESSAN5jgDjQ) 
 
