@@ -22,7 +22,7 @@
  <li>Pycharm</li>
  <li>Python 3.5+</li>
  <li>pip install -r requirements.txt</li>
-<ol>
+</ol>
   
 # :dolphin:V1.0    
 ## 项目结构    
@@ -33,9 +33,17 @@ face_recognize_punchcard_lib.py和face_recognize_punchcard.py本质上差不多�
 
 ## 运行效果   
 ### 1. 主界面   
+
+
 ![](pictures/1.png)   
+
+
 ### 2. 人脸录入   
+
+
 ![](pictures/2.png)    
+
+
 ### 3. 刷脸考勤   
 
 >图片涉及个人隐私，已被我删除。
@@ -88,7 +96,6 @@ face_recognize_punchcard_lib.py和face_recognize_punchcard.py本质上差不多�
 ## :dolphin:V2.0版本已打包,可直接下载运行,文件过大，只上传百度云  
 
 [链接：https://pan.baidu.com/s/1aIA6AhTB8LVESSAN5jgDjQ 提取码：l7or](https://pan.baidu.com/s/1aIA6AhTB8LVESSAN5jgDjQ) 
-
 
 ## 赞赏  
 ![](https://github.com/inspurer/WorkAttendanceSystem/blob/master/pictures/TIM%E5%9B%BE%E7%89%8720181208222337.png)  
