@@ -7,7 +7,10 @@
   <img src="https://img.shields.io/badge/numpy--yellow.svg"></a>
  </p>
  
+ 
  一个基于opencv人脸识别的员工考勤系统，作者某双一流A类大学里的~~一流~~学生，写于2018/09/，python课设期间。  
+ 
+ 
  
 |作者|[inspurer](https://inspurer.github.io/2018/06/07/%E6%9C%88%E5%B0%8F%E6%B0%B4%E9%95%BF%E7%9A%84%E7%94%B1%E6%9D%A5/#more)|
 |:---:|:---:|
@@ -29,7 +32,7 @@
 
 ~~mainui.py是主界面，调用face_img_register.py和face_recognize_punchcard.py，其中face_img_register.py主要实现录入人脸信息功能，face_recognize_punchcard.py实现刷脸考勤，face_feature_storage.py是在调试过程中产生的文件，可无视 
 face_recognize_punchcard_lib.py和face_recognize_punchcard.py本质上差不多，但是前者是给face_img_register.py库依赖。    
-防止录入两个同样的人脸建不同数据库的风险。  ~~ 
+防止录入两个同样的人脸建不同数据库的风险.~~
 
 ## 运行效果   
 ### 1. 主界面   
