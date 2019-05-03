@@ -385,7 +385,7 @@ class WAS(wx.Frame):
                         if nowdt[nowdt.index(" ")+1:-1] <= self.puncard_time:
                             self.infoText.AppendText(nowdt + "工号:" + str(self.knew_id[i])
                                                  + " 姓名:" + self.knew_name[i] + " 成功签到,且未迟到\r\n")
-                            self.insertARow([self.knew_id[i],self.knew_name[i],nowdt,"否"],1)
+                            self.insertARow([self.knew_id[i],self.knew_name[i],nowdt,"否"],2)
                         else:
                             self.infoText.AppendText(nowdt + "工号:" + str(self.knew_id[i])
                                                      + " 姓名:" + self.knew_name[i] + " 成功签到,但迟到了\r\n")
