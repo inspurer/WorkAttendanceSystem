@@ -1,4 +1,4 @@
-# WorkAttendanceSystem    
+# :dolphin:WorkAttendanceSystem    
  
 <p align="center">
   <img src="https://img.shields.io/badge/dlib--green.svg"></a>
@@ -8,7 +8,7 @@
  </p>
  
  
- 一个基于opencv人脸识别的员工考勤系统，作者某双一流A类大学里的~~一流~~学生，写于2018/09/，python课设期间。  
+ 一个基于opencv、dlib人脸识别的员工考勤系统，作者某双一流A类大学里的~~一流~~学生，写于2018/09/，python学习期间。  
  
  
  
@@ -16,6 +16,9 @@
 |:---:|:---:|
 |QQ交流群|[861016679](https://jq.qq.com/?_wv=1027&k=5Js6sKS)|
 |个人博客|[https://inspurer.github.io/](https://inspurer.github.io/)|
+
+
+<font size='4' color='blue'>开源免费版，需商业版（在免费版上增强了上下班打卡、时间设置、网页表格、日志批量导出等一系列功能）请在微信公众号：月小水长后台私戳我</font>
 
 
 ------------------------------------------------------------------------------------
