@@ -1,4 +1,11 @@
-#coding=utf-8
+# -*- coding: utf-8 -*-
+# author:           inspurer(月小水长)
+# pc_type           lenovo
+# create_time:      2019/6/2 19:25
+# file_name:        lzq01.py
+# github            https://github.com/inspurer
+# 微信公众号         月小水长(ID: inspurer)
+
 import wx
 import wx.grid
 import sqlite3
@@ -11,6 +18,7 @@ import dlib  # 人脸识别的库dlib
 import numpy as np  # 数据处理的库numpy
 import cv2  # 图像处理的库OpenCv
 import _thread
+import threading
 
 ID_NEW_REGISTER = 160
 ID_FINISH_REGISTER = 161
@@ -34,7 +42,6 @@ def return_euclidean_distance(feature_1, feature_2):
     feature_2 = np.array(feature_2)
     dist = np.sqrt(np.sum(np.square(feature_1 - feature_2)))
     print("欧式距离: ", dist)
-
     if dist > 0.4:
         return "diff"
     else:
@@ -56,7 +63,7 @@ class WAS(wx.Frame):
         self.face_feature = ""
         self.pic_num = 0
         self.flag_registed = False
-        self.puncard_time = "09:00:00"
+        self.puncard_time = "21:00:00"
         self.loadDataBase(1)
 
     def initMenu(self):
@@ -123,7 +130,9 @@ class WAS(wx.Frame):
 
     def OnOpenLogcatClicked(self,event):
         self.loadDataBase(2)
-        grid = wx.grid.Grid(self,pos=(320,0),size=(600,500))
+        #必须要变宽才能显示 scroll
+        self.SetSize(980,560)
+        grid = wx.grid.Grid(self,pos=(320,0),size=(640,500))
         grid.CreateGrid(100, 4)
         for i in range(100):
             for j in range(4):
@@ -133,8 +142,8 @@ class WAS(wx.Frame):
         grid.SetColLabelValue(2, "打卡时间")
         grid.SetColLabelValue(3, "是否迟到")
 
-        grid.SetColSize(0,100)
-        grid.SetColSize(1,100)
+        grid.SetColSize(0,120)
+        grid.SetColSize(1,120)
         grid.SetColSize(2,150)
         grid.SetColSize(3,150)
 
@@ -149,6 +158,8 @@ class WAS(wx.Frame):
         pass
 
     def OnCloseLogcatClicked(self,event):
+        self.SetSize(920,560)
+
         self.initGallery()
         pass
 
@@ -217,7 +228,6 @@ class WAS(wx.Frame):
                     for ii in range(face_height):
                         for jj in range(face_width):
                             im_blank[ii][jj] = im_rd[biggest_face.top() + ii][biggest_face.left() + jj]
-                    self.pic_num += 1
                     # cv2.imwrite(path_make_dir+self.name + "/img_face_" + str(self.sc_number) + ".jpg", im_blank)
                     # cap = cv2.VideoCapture("***.mp4")
                     # cap.set(cv2.CAP_PROP_POS_FRAMES, 2)
@@ -227,7 +237,9 @@ class WAS(wx.Frame):
                     if len(self.name)>0:
                         cv2.imencode('.jpg', im_blank)[1].tofile(
                         PATH_FACE + self.name + "/img_face_" + str(self.pic_num) + ".jpg")  # 正确方法
+                        self.pic_num += 1
                         print("写入本地：", str(PATH_FACE + self.name) + "/img_face_" + str(self.pic_num) + ".jpg")
+                        self.infoText.AppendText(self.getDateAndTime()+"图片:"+str(PATH_FACE + self.name) + "/img_face_" + str(self.pic_num) + ".jpg保存成功\r\n")
                 except:
                     print("保存照片异常,请对准摄像头")
 
@@ -245,7 +257,6 @@ class WAS(wx.Frame):
                                            prompt="工号", caption="温馨提示",
                                            value=ID_WORKER_UNAVIABLE,
                                            parent=self.bmp,max=100000000,min=ID_WORKER_UNAVIABLE)
-            print(self.id)
             for knew_id in self.knew_id:
                 if knew_id == self.id:
                     self.id = ID_WORKER_UNAVIABLE
@@ -267,9 +278,11 @@ class WAS(wx.Frame):
         pass
 
     def OnFinishRegister(self):
+
         self.new_register.Enable(True)
         self.finish_register.Enable(False)
         self.cap.release()
+
         self.bmp.SetBitmap(wx.Bitmap(self.pic_index))
         if self.flag_registed == True:
             dir = PATH_FACE + self.name
@@ -313,8 +326,6 @@ class WAS(wx.Frame):
             os.rmdir(PATH_FACE + self.name)
             print("已删除空文件夹",PATH_FACE + self.name)
         self.initData()
-
-
 
     def OnFinishRegisterClicked(self,event):
         self.OnFinishRegister()
@@ -407,7 +418,8 @@ class WAS(wx.Frame):
         self.start_punchcard.Enable(False)
         self.end_puncard.Enable(True)
         self.loadDataBase(2)
-        _thread.start_new_thread(self.punchcard_cap,(event,))
+        threading.Thread(target=self.punchcard_cap,args=(event,)).start()
+        #_thread.start_new_thread(self.punchcard_cap,(event,))
         pass
 
     def OnEndPunchCardClicked(self,event):
@@ -437,7 +449,6 @@ class WAS(wx.Frame):
         self.infoText.SetFont(font)
         self.infoText.SetBackgroundColour('TURQUOISE')
         pass
-
 
     def initGallery(self):
         self.pic_index = wx.Image("drawable/index.png", wx.BITMAP_TYPE_ANY).Scale(600, 500)
