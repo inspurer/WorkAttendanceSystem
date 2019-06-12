@@ -1,6 +1,8 @@
-# :dolphin:WorkAttendanceSystem    
 
-## 项目及作者说明
+<p style="text-align:center;color:#1e819e;font-size:1.3em;font-weight: bold;">
+项目及作者说明
+</p>
+
  
 <p align="center">
   <img src="https://img.shields.io/badge/dlib--green.svg"></a>
@@ -18,8 +20,10 @@
 |QQ交流群|[861016679](https://jq.qq.com/?_wv=1027&k=5Js6sKS)|
 |个人博客|[https://inspurer.github.io/](https://inspurer.github.io/)|
 
+<p style="text-align:center;color:#1e819e;font-size:1.3em;font-weight: bold;">
+开源版及商业版说明
+</p>
 
-## 开源版及商业版说明
 
 ||开源版|商业版|
 |:---:|:---:|:---:|
@@ -31,23 +35,30 @@
 |考勤日志展示（网页表格）|不支持|支持|
 |考勤日志自定义导出|不支持|支持|
 
->另外，商业版在性能、界面均有一定程度的优化，如需商业版在**微信公众号：月小水长**后台私戳我，伸手党勿扰。
-
+>商业版源代码和 exe 均未公开，如需商业版在**微信公众号：月小水长**后台私戳我，伸手党勿扰。
 
 
 ------------------------------------------------------------------------------------
 
-# :dolphin:QuickStart
+<p style="text-align:center;color:#1e819e;font-size:1.3em;font-weight: bold;">
+QuickStart
+</p>
+
 <ol>
- <li>Pycharm</li>
- <li>Python 3.5+</li>
- <li>pip install -r requirements.txt</li>
+ <li>IDE：Pycharm</li>
+ <li>环境：Python 3.5+</li>
+ <li>第三方包：pip install -r requirements.txt</li>
 </ol>
   
-# :dolphin:V1.0    
+<p style="text-align:center;color:#1e819e;font-size:1.3em;font-weight: bold;">
+V1.0
+</p>
+
 ## 项目结构    
 
-~~mainui.py是主界面，调用face_img_register.py和face_recognize_punchcard.py，其中face_img_register.py主要实现录入人脸信息功能，face_recognize_punchcard.py实现刷脸考勤，face_feature_storage.py是在调试过程中产生的文件，可无视 
+~~mainui.py是主界面，调用face_img_register.py和face_recognize_punchcard.py。
+face_img_register.py主要实现录入人脸信息功能，face_recognize_punchcard.py实现刷脸考勤。
+face_feature_storage.py是在调试过程中产生的文件，可无视 。
 face_recognize_punchcard_lib.py和face_recognize_punchcard.py本质上差不多，但是前者是给face_img_register.py库依赖。    
 防止录入两个同样的人脸建不同数据库的风险.~~
 
@@ -81,7 +92,9 @@ face_recognize_punchcard_lib.py和face_recognize_punchcard.py本质上差不多�
 >代码的运行速度少许下降    
 ----------------------------------------------------------------------------------------------
 
-# :dolphin:V2.0   
+<p style="text-align:center;color:#1e819e;font-size:1.3em;font-weight: bold;">
+V2.0
+</p>
 ## 重构代码   
 
 >老师看了我的V1.0版本后给的建议，
@@ -113,7 +126,9 @@ face_recognize_punchcard_lib.py和face_recognize_punchcard.py本质上差不多�
 
 -----------------------------------------------------------------------------------
 
-# 后话
+<p style="text-align:center;color:#1e819e;font-size:1.3em;font-weight: bold;">
+后话
+</p>
 ## git clone下载仓库速度过慢的问题请参考:[CSDN博客](https://blog.csdn.net/ygdxt/article/details/82825013)
 
 ## 有关代码的详细解释和设计实现过程请参考:[微信公众号:月小水长](https://mp.weixin.qq.com/s/6BxBQoSwzhI6WooKMuTkNA)  
