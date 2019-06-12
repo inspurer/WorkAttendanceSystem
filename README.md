@@ -1,7 +1,5 @@
 
-<p style="text-align:center;color:#1e819e;font-size:1.3em;font-weight: bold;">
-项目及作者说明
-</p>
+## 项目及作者说明
 
  
 <p align="center">
@@ -20,9 +18,7 @@
 |QQ交流群|[861016679](https://jq.qq.com/?_wv=1027&k=5Js6sKS)|
 |个人博客|[https://inspurer.github.io/](https://inspurer.github.io/)|
 
-<p style="text-align:center;color:#1e819e;font-size:1.3em;font-weight: bold;">
-开源版及商业版说明
-</p>
+## 开源版及商业版说明
 
 
 ||开源版|商业版|
@@ -40,9 +36,8 @@
 
 ------------------------------------------------------------------------------------
 
-<p style="text-align:center;color:#1e819e;font-size:1.3em;font-weight: bold;">
-QuickStart
-</p>
+## QuickStart
+
 
 <ol>
  <li>IDE：Pycharm</li>
@@ -50,9 +45,8 @@ QuickStart
  <li>第三方包：pip install -r requirements.txt</li>
 </ol>
   
-<p style="text-align:center;color:#1e819e;font-size:1.3em;font-weight: bold;">
-V1.0
-</p>
+# V1.0
+
 
 ## 项目结构    
 
@@ -92,9 +86,8 @@ face_recognize_punchcard_lib.py和face_recognize_punchcard.py本质上差不多�
 >代码的运行速度少许下降    
 ----------------------------------------------------------------------------------------------
 
-<p style="text-align:center;color:#1e819e;font-size:1.3em;font-weight: bold;">
-V2.0
-</p>
+# V2.0
+
 ## 重构代码   
 
 >老师看了我的V1.0版本后给的建议，
@@ -126,9 +119,8 @@ V2.0
 
 -----------------------------------------------------------------------------------
 
-<p style="text-align:center;color:#1e819e;font-size:1.3em;font-weight: bold;">
-后话
-</p>
+# 后话
+
 ## git clone下载仓库速度过慢的问题请参考:[CSDN博客](https://blog.csdn.net/ygdxt/article/details/82825013)
 
 ## 有关代码的详细解释和设计实现过程请参考:[微信公众号:月小水长](https://mp.weixin.qq.com/s/6BxBQoSwzhI6WooKMuTkNA)  
@@ -136,6 +128,14 @@ V2.0
 ## V2.0版本已打包,可直接下载运行,文件过大，只上传百度云  
 
 [链接：https://pan.baidu.com/s/1aIA6AhTB8LVESSAN5jgDjQ 提取码：l7or](https://pan.baidu.com/s/1aIA6AhTB8LVESSAN5jgDjQ) 
+
+## 更新计划
+
+<ol>
+ <li>改进特征提取算法，提高识别精度。</li>
+ <li>采用 PyQt5 重构整个界面。</li>
+ <li>改用 Java 语言，移植到 Android 平台上。</li>
+</ol>
 
 ## 赞赏  
 ![](https://github.com/inspurer/WorkAttendanceSystem/blob/master/pictures/TIM%E5%9B%BE%E7%89%8720181208222337.png)  
