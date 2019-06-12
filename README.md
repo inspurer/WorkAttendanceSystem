@@ -116,7 +116,7 @@ face_recognize_punchcard_lib.py和face_recognize_punchcard.py本质上差不多�
 # 后话
 ## git clone下载仓库速度过慢的问题请参考:[CSDN博客](https://blog.csdn.net/ygdxt/article/details/82825013)
 
-## 有关代码的详细解释和设计实现过程请参考:[微信公众号:inspurer](https://mp.weixin.qq.com/s/6BxBQoSwzhI6WooKMuTkNA)  
+## 有关代码的详细解释和设计实现过程请参考:[微信公众号:月小水长](https://mp.weixin.qq.com/s/6BxBQoSwzhI6WooKMuTkNA)  
 
 ## V2.0版本已打包,可直接下载运行,文件过大，只上传百度云  
 
