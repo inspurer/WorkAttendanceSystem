@@ -125,7 +125,7 @@ face_recognize_punchcard_lib.py和face_recognize_punchcard.py本质上差不多�
 
 ## 有关代码的详细解释和设计实现过程请参考:[微信公众号:月小水长](https://mp.weixin.qq.com/s/6BxBQoSwzhI6WooKMuTkNA)  
 
-## V2.0版本已打包,可直接下载运行,文件过大，只上传百度云  
+## V2.0版本已打包,可直接下载运行,文件过大，只上传百度云(注意这是 exe 不是源代码！！！）  
 
 [链接：https://pan.baidu.com/s/1aIA6AhTB8LVESSAN5jgDjQ 提取码：l7or](https://pan.baidu.com/s/1aIA6AhTB8LVESSAN5jgDjQ) 
 
