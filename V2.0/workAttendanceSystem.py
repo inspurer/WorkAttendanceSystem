@@ -148,7 +148,7 @@ class WAS(wx.Frame):
         grid.SetColSize(3,150)
 
 
-        grid.SetCellTextColour("NAVY")
+        #grid.SetCellTextColour("NAVY") 部分机器上这一行报错
         for i,id in enumerate(self.logcat_id):
             grid.SetCellValue(i,0,str(id))
             grid.SetCellValue(i,1,self.logcat_name[i])
