@@ -1,5 +1,5 @@
 wxPython==4.0.4
-numpy==1.14.2
+numpy==1.21.0
 opencv-python==3.4.2.17
 dlib==19.4.0
 scikit-image==0.14.0
