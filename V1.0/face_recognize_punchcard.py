@@ -64,8 +64,8 @@ features_known_arr = []
 #print("s0",csv_rd.shape[0],"s1",csv_rd.shape[1])
 for i in range(csv_rd.shape[0]):
     features_someone_arr = []
-    for j in range(0, len(csv_rd.ix[i, :])):
-        features_someone_arr.append(csv_rd.ix[i, :][j])
+    for j in range(0, len(csv_rd.loc[i, :])):
+        features_someone_arr.append(csv_rd.loc[i, :][j])
     #    print(features_someone_arr)
     features_known_arr.append(features_someone_arr)
 print("数据库人脸数:", len(features_known_arr))
