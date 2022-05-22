@@ -1,5 +1,20 @@
-## 论文引用需注明来源
+## 引用请注明来源
+If you use this project in your research, please cite this project.
+```
+@misc{WorkAttendanceSystem,
+    author = {Tao Xiao},
+    title = {An employee face recognition attendance system based on opencv and dilb},
+    year = {2018},
+    publisher = {GitHub},
+    journal = {GitHub repository},
+    howpublished = {\url{https://github.com/inspurer/WorkAttendanceSystem}},
+}
+```
 
+## 商用请联系商业授权
+已经发现数十起淘宝闲鱼贩子贩卖我的代码，不对买家负责最后买家找到我的案例，价格几千不等；对于这种投机倒把的行为，天人共怒之。可惜之前的没有存档，现将相关店铺或工作室黑名单罗列如下：
+* 淘宝店铺：川大技术室
+* 
 ## 项目及作者说明
 
  
